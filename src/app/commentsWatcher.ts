@@ -2,7 +2,7 @@ let numberOfCommentsLoaded: number = 0
 
 const init = ({ onNewCommentsLoad }: CommentsWatcherParams) : void => {
   setInterval(() => {
-    const comments = document.querySelectorAll('ytd-comment-thread-renderer')
+    const comments = document.querySelectorAll('ytd-comment-renderer')
 
     if (comments.length !== numberOfCommentsLoaded) {
       numberOfCommentsLoaded = comments.length
