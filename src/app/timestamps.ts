@@ -23,12 +23,12 @@ const createButtonToReturnToLastClickedTimestamps = () : void => {
     return
   }
 
-  const commentsTitle = document.querySelector('.count-text')
+  const videoTitle = document.querySelector('h1.ytd-video-primary-info-renderer')
 
   const button = document.createElement('a')
-  button.innerText = 'Return to the last clicked comment'
-  button.style.padding = '10px 0'
-  button.style.marginLeft = '32px'
+  button.innerText = 'Return to the last clicked timestamp'
+  button.style.display = 'block'
+  button.style.marginTop = '12px'
   button.style.color = 'var(--yt-spec-call-to-action, #3ea6ff)'
   button.style.fontSize = 'var(--ytd-tab-system_-_font-size)'
   button.style.fontWeight = 'var(--ytd-tab-system_-_font-weight)'
@@ -42,7 +42,7 @@ const createButtonToReturnToLastClickedTimestamps = () : void => {
     })
   })
 
-  commentsTitle.insertAdjacentElement('afterend', button)
+  videoTitle.insertAdjacentElement('afterend', button)
   isReturnButtonCreated = true
 }
 
